@@ -10,8 +10,8 @@ class Solution:
         x = np.array(x)
         gamma = np.array(gamma)
 
-        RMS = np.sqrt(np.mean(np.square(x)) + eps)
+        rms = np.sqrt(np.mean(np.square(x)) + eps)
 
-        x_hat = x / RMS
+        x_hat = x / rms
         out = gamma * x_hat
-        return np.round(out, 4)
+        return np.round(out, 4).tolist()
